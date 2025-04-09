@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Heart,
   Phone,
@@ -8,7 +7,6 @@ import {
 } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Navbar from './navbar';
 import Footer from './footer';
 // Initialize AOS for scroll animations.
 AOS.init({ once: true });
@@ -53,7 +51,7 @@ function AboutUs() {
               <img
                 src="/aboutteam.jpg" // Replace with an actual image path.
                 alt="Our Team"
-                style={{ width: 488, height: 288 }}
+                style={{ maxWidth: '100%' , height: 333 }}
                 className="rounded-2xl shadow-xl"
               />
             </div>

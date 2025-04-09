@@ -23,7 +23,7 @@ function Home() {
   <div className="container mx-auto px-6 py-16 md:py-24">
     <div className="flex flex-col md:flex-row items-center">
       <div className="md:w-1/2">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
           Empowering Health Through Personalized Pharmacy Care
         </h1>
         <p className="mt-4 text-xl text-gray-600">
@@ -50,11 +50,11 @@ function Home() {
         </div>
         */}
       </div>
-      <div className="md:w-1/2 mt-12 md:mt-0">
+      <div className="md:w-1/2 mt-12  md:mt-0">
         <img 
           src="/medical-17.jpg" 
           alt="Medical professionals"
-          style={{ maxWidth: '90%', height: 288 }}
+          style={{ maxWidth: '100%', height: 288 }}
           className="rounded-2xl shadow-xl"
         />
       </div>
