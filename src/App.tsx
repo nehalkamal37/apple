@@ -29,7 +29,7 @@ const AppLayout = () => {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/apple">
       <Routes>
         {/* New Routes */}
         <Route element={<AppLayout />}>

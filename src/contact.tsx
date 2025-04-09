@@ -75,7 +75,7 @@ function ContactUs() {
                     <div className="md:col-span-2">
                       <label className="block text-gray-700">Message</label>
                       <textarea
-                        rows="5"
+                        rows={5}
                         placeholder="Your message"
                         className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#004e70]"
                       ></textarea>

@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     // Fixed navbar with backdrop and shadow
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#f5f0e6] backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center">
@@ -44,12 +44,13 @@ const Navbar = () => {
         </div>
         {/* Desktop Sign In Button */}
         <div className="hidden md:flex items-center">
-          <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-2 rounded-full hover:opacity-90 transition-colors flex items-center">
+        <a href='/prescriber-portal'>  <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-3 rounded-full hover:opacity-90 transition-colors flex items-center">
             Sign In <ChevronRight className="ml-2 h-5 w-5" />
           </button>
+          </a>
         </div>
 
-        
+
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center">
           <button

@@ -16,7 +16,6 @@ function PrivacyNotice() {
   return (
     <div className="min-h-screen bg-[#f5f0e6]">
       {/* Navigation */}
-      <Navbar />
 
       {/* Hero Header */}
       <header className="py-16 bg-gradient-to-r from-[white] to-[#efe9dd]">
