@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Navbar from "./navbar";
+import Footer from "./footer";
 // Initialize AOS (can also be done in your main entry file)
 AOS.init({ once: true });
 
@@ -34,56 +35,7 @@ const PrescriberPortal = () => {
   return (
     <div className="min-h-screen bg-[#f5f0e6]">
       {/* Navigation */}
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link to="/">
-              <img
-                src="/toollogo.png" // Replace with your actual logo path
-                alt="Apple Specialty Pharmacy Logo"
-                className="w-[150px] h-[90px] object-contain"
-              />
-            </Link>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
-              About Us
-            </Link>
-            <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Services
-            </Link>
-            <Link
-              to="/prescriber-portal"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              Prescriber Portal
-            </Link>
-            <Link
-              to="/patient-resources"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              Patient Resources
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Contact Us
-            </Link>
-            <Link
-              to="/privacy-notice"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              Privacy Notice
-            </Link>
-          </div>
-          <div className="flex items-center">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-              Book Appointment
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Header */}
       <header className="py-16 bg-gradient-to-r from-[white] to-[#efe9dd]">
@@ -126,7 +78,7 @@ const PrescriberPortal = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#003f63]"
                   required
                 />
               </div>
@@ -140,13 +92,13 @@ const PrescriberPortal = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#003f63]"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+                className="w-full bg-[#004e70] text-white px-4 py-2 rounded-full hover:bg-[#003f63] transition-colors"
               >
                 Login
               </button>
@@ -190,12 +142,12 @@ const PrescriberPortal = () => {
                   placeholder="Enter referral details..."
                   value={referralNotes}
                   onChange={(e) => setReferralNotes(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#003f63]"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors"
+                className="w-full bg-[#004e70] text-white px-4 py-2 rounded-full hover:bg-[#003f63] transition-colors"
               >
                 Submit Referral
               </button>
@@ -205,73 +157,7 @@ const PrescriberPortal = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#efe9dd] py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center">
-                <img
-                  src="/toollogo.png"
-                  alt="Apple Specialty Pharmacy Logo"
-                  className="w-[150px] h-[90px] object-contain"
-                />
-              </div>
-              <p className="mt-4 text-gray-600">
-                Providing quality pharmacy services since 2025
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">Contact</h3>
-              <div className="mt-4 space-y-4">
-                <div className="flex items-center text-gray-600">
-                  <i className="fa-solid fa-phone h-5 w-5 mr-2"></i>
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <i className="fa-solid fa-location-dot h-5 w-5 mr-2"></i>
-                  <span>123 Medical Center Dr, City, State</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">Quick Links</h3>
-              <div className="mt-4 space-y-2">
-                <Link to="/about" className="block text-gray-600 hover:text-blue-600">
-                  About Us
-                </Link>
-                <Link to="/services" className="block text-gray-600 hover:text-blue-600">
-                  Services
-                </Link>
-                <Link to="/team" className="block text-gray-600 hover:text-blue-600">
-                  Team
-                </Link>
-                <Link to="/contact" className="block text-gray-600 hover:text-blue-600">
-                  Contact
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">Newsletter</h3>
-              <p className="mt-4 text-gray-600">
-                Subscribe to our newsletter for health tips and updates.
-              </p>
-              <div className="mt-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-2 rounded-full border border-gray-300 bg-[#f8f4ea] text-gray-900 focus:outline-none focus:border-blue-600"
-                />
-                <button className="mt-2 w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; 2025 Apple Specialty Pharmacy. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+     <Footer />
     </div>
   );
 };

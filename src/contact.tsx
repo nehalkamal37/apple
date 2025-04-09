@@ -2,7 +2,9 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Navbar from "./navbar";
 import Footer from "./footer";
+
 // Optionally using Font Awesome; if using Lucide, import icons accordingly
 // For demonstration, we'll use Font Awesome classes
 
@@ -13,31 +15,7 @@ function ContactUs() {
   return (
     <div className="min-h-screen bg-[#f5f0e6]">
       {/* Navigation */}
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <img
-              src="/toollogo.png" // Update to your logo path
-              alt="MediCare Logo"
-              className="w-[150px] h-[90px] object-contain"
-            />
-          </div>
-          <div className="hidden md:flex space-x-8">
-      <a href="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-      <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
-      <a href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
-      <a href="/prescriber-portal" className="text-gray-600 hover:text-blue-600 transition-colors">Prescriber Portal</a>
-      <a href="/patient" className="text-gray-600 hover:text-blue-600 transition-colors">Patient Resources</a>
-      <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a>
-      <a href="/privacy-notice" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy Notice</a>
-    </div>
-          <div className="flex items-center">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-              Book Appointment
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Header */}
       <header className="py-16 bg-gradient-to-r from-[white] to-[#efe9dd]">
@@ -75,7 +53,7 @@ function ContactUs() {
                       <input
                         type="text"
                         placeholder="Your first name"
-                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-600"
+                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#004e70]"
                       />
                     </div>
                     <div>
@@ -83,7 +61,7 @@ function ContactUs() {
                       <input
                         type="text"
                         placeholder="Your last name"
-                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-600"
+                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#004e70]"
                       />
                     </div>
                     <div className="md:col-span-2">
@@ -91,7 +69,7 @@ function ContactUs() {
                       <input
                         type="email"
                         placeholder="Your email address"
-                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-600"
+                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#004e70]"
                       />
                     </div>
                     <div className="md:col-span-2">
@@ -99,7 +77,7 @@ function ContactUs() {
                       <textarea
                         rows="5"
                         placeholder="Your message"
-                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-600"
+                        className="mt-1 w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#004e70]"
                       ></textarea>
                     </div>
                   </div>
@@ -108,7 +86,7 @@ function ContactUs() {
                   </p>
                   <button
                     type="submit"
-                    className="mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+                    className="mt-4 bg-[#004e70] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
                   >
                     Submit
                   </button>

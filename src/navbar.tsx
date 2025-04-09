@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="container mx-auto px-6 py-4">
-      <div className="flex items-center justify-between">
+    // Fixed navbar with backdrop and shadow
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center">
           <Link to="/">
@@ -20,20 +22,34 @@ const Navbar = () => {
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8">
-          <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-          <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</Link>
-          <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</Link>
-          <Link to="/prescriber-portal" className="text-gray-600 hover:text-blue-600 transition-colors">Prescriber Portal</Link>
-          <Link to="/patient" className="text-gray-600 hover:text-blue-600 transition-colors">Patient Resources</Link>
-          <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</Link>
-          <Link to="/privacy-notice" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy Notice</Link>
+          <Link to="/" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            Home
+          </Link>
+          <Link to="/about" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            About Us
+          </Link>
+      
+          <Link to="/prescriber-portal" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            Prescriber Portal
+          </Link>
+          <Link to="/patient" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            Patient Resources
+          </Link>
+          <Link to="/contact" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            Contact Us
+          </Link>
+          <Link to="/privacy-notice" className="text-gray-600 hover:text-[#003f63] transition-colors">
+            Privacy Notice
+          </Link>
         </div>
-        {/* Desktop Sign Up Button */}
+        {/* Desktop Sign In Button */}
         <div className="hidden md:flex items-center">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-            Sign Up
+          <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-2 rounded-full hover:opacity-90 transition-colors flex items-center">
+            Sign In <ChevronRight className="ml-2 h-5 w-5" />
           </button>
         </div>
+
+        
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center">
           <button
@@ -56,8 +72,8 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden mt-4">
-          <div className="flex flex-col space-y-4">
+        <div className="md:hidden bg-white/90 backdrop-blur-md">
+          <div className="px-6 py-4 flex flex-col space-y-4">
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
@@ -72,13 +88,7 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            <Link
-              to="/services"
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              Services
-            </Link>
+           
             <Link
               to="/prescriber-portal"
               onClick={() => setIsOpen(false)}
@@ -107,10 +117,11 @@ const Navbar = () => {
             >
               Privacy Notice
             </Link>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-              Sign Up
-            </button>
+            <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-2 rounded-full hover:opacity-90 transition-colors flex items-center">
+            Sign In <ChevronRight className="ml-2 h-5 w-5" />
+          </button>
           </div>
+         
         </div>
       )}
     </nav>

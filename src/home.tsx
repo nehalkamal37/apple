@@ -18,38 +18,53 @@ function Home() {
     <div className="min-h-screen bg-[#f5f0e6]">
       {/* Hero Section            <header className="bg-gradient-to-r from-[#f8f4ea] to-[#efe9dd]">
 */}
-<Navbar />
-      <header className="bg-gradient-to-r from-[white] to-[#efe9dd]">
-        {/*
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
-  <div className="container mx-auto px-6 py-4">
-    <div className="flex items-center justify-between">
-      <div className="flex items-center">
-        <img 
-          src="/images/logo.png" 
-          alt="MediCare Logo" 
-          className="w-[150px] h-[50px] object-contain" 
-        />
-      </div>
-      <div className="hidden md:flex space-x-8">
-        <a href="#home" className="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-        <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
-        <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
-        <a href="#prescriber-portal" className="text-gray-600 hover:text-blue-600 transition-colors">Prescriber Portal</a>
-        <a href="#patient-resources" className="text-gray-600 hover:text-blue-600 transition-colors">Patient Resources</a>
-        <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact Us</a>
-        <a href="#privacy" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy Notice</a>
-      </div>
-      <div className="flex items-center">
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-          Book Appointment
+
+<header className="bg-gradient-to-r from-white to-[#efe9dd]">
+  <div className="container mx-auto px-6 py-16 md:py-24">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-1/2">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          Empowering Health Through Personalized Pharmacy Care
+        </h1>
+        <p className="mt-4 text-xl text-gray-600">
+          At our pharmacy, our mission is to improve lives by providing innovative medication management, expert guidance, and unwavering patient support. We believe in accessible healthcare that empowers every individual on their journey to optimal well-being.
+        </p>
+        <div className="mt-8 flex space-x-4">
+        <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-2 rounded-full hover:opacity-90 transition-colors flex items-center">
+        Learn More <ChevronRight className="ml-2 h-5 w-5" />
         </button>
+
+  
+  <button className="bg-[#e8e2d5] text-[#004e70] border border-[#e8e2d5] px-8 py-3 rounded-full hover:bg-[#efe9dd] transition-colors">
+    Contact Us
+  </button>
+</div>
+{/*
+        <div className="mt-8 flex space-x-4">
+          <button className="bg-[#e8e2d5] text-blue-600 border border-[#e8e2d5] px-8 py-3 rounded-full hover:bg-[#efe9dd] transition-colors flex items-center">
+            Learn More <ChevronRight className="ml-2 h-5 w-5" />
+          </button>
+          <button className="bg-[#e8e2d5] text-blue-600 border border-[#e8e2d5] px-8 py-3 rounded-full hover:bg-[#efe9dd] transition-colors">
+            Contact Us
+          </button>
+        </div>
+        */}
+      </div>
+      <div className="md:w-1/2 mt-12 md:mt-0">
+        <img 
+          src="/medical-17.jpg" 
+          alt="Medical professionals"
+          style={{ maxWidth: '90%', height: 288 }}
+          className="rounded-2xl shadow-xl"
+        />
       </div>
     </div>
   </div>
-</nav>
-*/}
+</header>
 
+
+{/*
+      <header className="bg-gradient-to-r from-[white] to-[#efe9dd]">
         
         <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center">
@@ -72,7 +87,9 @@ function Home() {
 
             <div className="md:w-1/2 mt-12 md:mt-0">
               <img 
-              src="/bg.jpg"
+            //  src="car.png"
+                src="/medical-17.jpg"
+             // src="https://wallpapercrafter.com/desktop/289320-medic-hospital-laboratory-medical-health-doctor.jpg"
                // src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80"
                 alt="Medical professionals"
                 style={{ maxWidth: '90%', height: 288 }}
@@ -82,27 +99,29 @@ function Home() {
           </div>
         </div>
       </header>
-
+*/}
       {/* Features Section */}
       <section className="py-16 bg-[#f5f0e6]">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-[#f8f4ea] rounded-xl">
-              <Clock className="h-12 w-12 text-blue-600" />
+          {/*  <div className="p-6 bg-[#f8f4ea] rounded-xl">  */}
+          <div className="p-6 bg-[#fbf8f1] rounded-xl">
+          <Clock className="h-12 w-12 text-[#004e70]" />
+
               <i className="fa-solid fa-sync-alt h-12 w-12 text-blue-600"></i>
 
               <h3 className="mt-4 text-xl font-semibold text-gray-900"> Refill process</h3>
               <p className="mt-2 text-gray-600"> Streamlined, convenient, and secure prescription refills.
               </p>
             </div>
-            <div className="p-6 bg-[#f8f4ea] rounded-xl">
-              <Stethoscope className="h-12 w-12 text-blue-600" />
+            <div className="p-6 bg-[#fbf8f1] rounded-xl">
+              <Stethoscope className="h-12 w-12 text-[#004e70]" />
               <h3 className="mt-4 text-xl font-semibold text-gray-900">Specialty medications offered</h3>
               <p className="mt-2 text-gray-600"> For Dermatology, Rheumatology, GI and more tailored specialty pharmacy services.
               </p>
             </div>
-            <div className="p-6 bg-[#f8f4ea] rounded-xl">
-              <Users className="h-12 w-12 text-blue-600" />
+            <div className="p-6 bg-[#fbf8f1] rounded-xl">
+              <Users className="h-12 w-12 text-[#004e70]" />
               <h3 className="mt-4 text-xl font-semibold text-gray-900"> Patient support services</h3>
               <p className="mt-2 text-gray-600">Personalized assistance from our expert pharmacy team for all your needs.
               </p>
@@ -173,7 +192,7 @@ function Home() {
           </h3>
           <p className="mt-2 text-gray-600 text-center">{service.description}</p>
           <a href="#"
-             className="mt-4 inline-block text-blue-600 flex items-center justify-center hover:underline">
+             className="mt-4 inline-block text-[#004e70] flex items-center justify-center hover:underline">
                                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
 
           </a>
@@ -215,7 +234,9 @@ function Home() {
       {/* Appointment Section */}
       <section className="py-16 bg-[#f5f0e6]">
         <div className="container mx-auto px-6">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12">
+        <div className="bg-gradient-to-r from-[#004e70] to-[#00344f] rounded-2xl p-8 md:p-12">
+    {/* Your content here */}
+
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-2/3">
                 <h2 className="text-3xl font-bold text-white">Ready to Get Started?</h2>
