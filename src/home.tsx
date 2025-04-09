@@ -245,9 +245,10 @@ function Home() {
                 </p>
               </div>
               <div className="mt-8 md:mt-0">
-                <button className="bg-[#f8f4ea] text-blue-600 px-8 py-3 rounded-full hover:bg-[#e8e2d5] transition-colors flex items-center">
+               <a href='/contact'> <button className="bg-[#f8f4ea] text-blue-600 px-8 py-3 rounded-full hover:bg-[#e8e2d5] transition-colors flex items-center">
                   Book Appointment <Calendar className="ml-2 h-5 w-5" />
                 </button>
+                </a>
               </div>
             </div>
           </div>

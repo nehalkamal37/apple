@@ -40,11 +40,11 @@ const Footer = () => {
               <a href="/about" className="block text-gray-600 hover:text-blue-600 text-sm">
                 About Us
               </a>
-              <a href="/services" className="block text-gray-600 hover:text-blue-600 text-sm">
-                Services
+              <a href="/prescriber-portal" className="block text-gray-600 hover:text-blue-600 text-sm">
+                prescriber portal
               </a>
-              <a href="/doctors" className="block text-gray-600 hover:text-blue-600 text-sm">
-                Doctors
+              <a href="/patient" className="block text-gray-600 hover:text-blue-600 text-sm">
+                Patient
               </a>
               <a href="/contact" className="block text-gray-600 hover:text-blue-600 text-sm">
                 Contact
