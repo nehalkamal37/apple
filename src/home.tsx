@@ -30,14 +30,14 @@ function Home() {
           At our pharmacy, our mission is to improve lives by providing innovative medication management, expert guidance, and unwavering patient support. We believe in accessible healthcare that empowers every individual on their journey to optimal well-being.
         </p>
         <div className="mt-8 flex space-x-4">
-        <button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-6 py-2 rounded-full hover:opacity-90 transition-colors flex items-center">
+      <a href='about'><button className="bg-gradient-to-r from-[#004e70] to-[#003f63] text-white px-8 py-3 rounded-full hover:opacity-90 transition-colors flex items-center">
         Learn More <ChevronRight className="ml-2 h-5 w-5" />
         </button>
-
+</a>
   
-  <button className="bg-[#e8e2d5] text-[#004e70] border border-[#e8e2d5] px-8 py-3 rounded-full hover:bg-[#efe9dd] transition-colors">
+  <a href='contact'><button className="bg-[#e8e2d5] text-[#004e70] border border-[#e8e2d5] px-8 py-3 rounded-full hover:bg-[#efe9dd] transition-colors">
     Contact Us
-  </button>
+  </button></a>
 </div>
 {/*
         <div className="mt-8 flex space-x-4">
