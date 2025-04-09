@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./navbar";
@@ -13,20 +12,22 @@ const PrescriberPortal = () => {
   const [password, setPassword] = useState("");
 
   // Referral form file state
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [referralNotes, setReferralNotes] = useState("");
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add secure login logic here (e.g., API call)
     alert(`Logging in with email: ${email}`);
   };
 
-  const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setSelectedFile(e.target.files[0]);
+    }
   };
 
-  const handleReferralSubmit = (e) => {
+  const handleReferralSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle file upload and referral details submission
     alert(`Referral submitted: ${selectedFile ? selectedFile.name : "No file"} - ${referralNotes}`);
@@ -138,7 +139,7 @@ const PrescriberPortal = () => {
                 </label>
                 <textarea
                   id="referralNotes"
-                  rows="4"
+                  rows={4}
                   placeholder="Enter referral details..."
                   value={referralNotes}
                   onChange={(e) => setReferralNotes(e.target.value)}

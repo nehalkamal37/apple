@@ -132,9 +132,9 @@ function ContactUs() {
                       height="100%"
                       frameBorder="0"
                       style={{ border: 0 }}
-                      allowFullScreen=""
+                      allowFullScreen={true}
                       aria-hidden="false"
-                      tabIndex="0"
+                      tabIndex={0}
                       className="rounded-xl shadow-lg"
                     ></iframe>
                   </div>
